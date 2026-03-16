@@ -1,0 +1,80 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1221;
+  --panel: #181b2f;
+  --maze: #0a0d19;
+  --wall: #2f67ff;
+  --dot: #ffe88a;
+  --pacman: #ffd400;
+  --ghost: #ff4b7d;
+  --text: #e6ebff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1c2150, var(--bg));
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+  color: var(--text);
+}
+
+.game-shell {
+  background: color-mix(in srgb, var(--panel), black 12%);
+  border: 1px solid #2f355d;
+  border-radius: 18px;
+  padding: 1.25rem;
+  width: min(94vw, 520px);
+  display: grid;
+  gap: 0.8rem;
+  justify-items: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0.2rem 0;
+}
+
+.hint {
+  margin: 0;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.hud {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+
+canvas {
+  background: var(--maze);
+  border: 2px solid #2f355d;
+  border-radius: 10px;
+  image-rendering: pixelated;
+}
+
+.status {
+  margin: 0;
+  min-height: 1.4em;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  background: linear-gradient(130deg, #6e87ff, #8b6eff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.06);
+}

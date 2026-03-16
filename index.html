@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>简易吃豆人</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <h1>吃豆人小游戏</h1>
+      <p class="hint">方向键 / WASD 控制，吃完所有豆子即获胜，碰到幽灵会失败。</p>
+      <div class="hud">
+        <span>分数：<strong id="score">0</strong></span>
+        <span>剩余豆子：<strong id="dots">0</strong></span>
+      </div>
+      <canvas id="game" width="420" height="420" aria-label="Pac-Man game"></canvas>
+      <p id="status" class="status">按空格开始游戏</p>
+      <button id="restart">重新开始</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
